@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tharun Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<link rel="shortcut icon" href="images/favicon.jpg">
+</head>
+<div id="loader">
+    <h1>Loading Tharun AI Portfolio...</h1>
+    <div class="loader-bar">
+        <div class="loader-fill"></div>
+    </div>
+</div>
+
+<body>
+<div id="particles-js"></div>
+
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+    <a href="#certifications">Certifications</a>
+    <button id="theme-toggle">🌙</button>
+    <a href="#contact">Contact</a>
+</nav>
+<section class="hero" id="home">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-left">
+
+        <!-- ADD HERE (1) -->
+         <div class="hero-social">...</div>
+        <div class="hero-badge">🚀 Open to Internship Opportunities</div>
+        <h1>Hi, I'm <span>Tharun Yaddannagaru</span></h1>
+        <h2 id="typing"></h2>
+
+        <p class="hero-text">
+            3rd Year B.Tech CSE-AI student passionate about AI,
+            Full Stack Development and Cloud Computing.
+        </p>
+
+        <p class="quote">"Building intelligent systems for tomorrow."</p>
+
+        <div class="hero-buttons">
+    <button onclick="location.href='#projects'">View Projects</button>
+
+    <a href="resume.pdf" target="_blank">
+        <button>👁 View Resume</button>
+    </a>
+
+    <a href="resume.pdf" download>
+        <button>📄 Download Resume</button>
+    </a>
+</div>
+
+        <div class="stats">
+            <div>3+ Projects</div>
+            <div>5+ Certifications</div>
+            <div>#1 Academic Rank</div>
+        </div>
+
+        <!-- ADD HERE (2) -->
+        <div class="hero-social">
+            <a href="https://github.com/tharunyeddannagaru">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tharun-yeddannagaru-5bb3a7298">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/tharun._.yaddannagaru">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (ADD THIS WHOLE BLOCK) -->
+   <div class="hero-right">
+    <div class="orbit-ring"></div>
+    <img src="images/profile.jpg" class="profile-pic" alt="Tharun">
+</div>
+</section> 
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-left">
+            <p>
+                I am <span>Tharun Yaddannagaru</span>, a 3rd-year B.Tech CSE-AI student
+                passionate about AI, Full Stack Development, and Cloud Computing.
+            </p>
+        </div>
+
+        <div class="about-right">
+            <div class="about-card">AI / ML</div>
+            <div class="about-card">Full Stack</div>
+            <div class="about-card">AWS</div>
+            <div class="about-card">Problem Solver</div>
+        </div>
+    </div>
+</section>
+
+<section class="skills" id="skills" data-aos="fade-up">
+    <h2>My Skills</h2>
+
+    <div class="skills-main">
+
+        <!-- Technical Skills -->
+        <div class="technical-section">
+            <h3 class="skill-title">Technical Skills</h3>
+
+            <div class="skills-container">
+
+                <div class="skill">
+                    <p>Python <span class="python-text">0%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress python"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Java <span class="java-text">0%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress java"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>AI / ML <span class="ai-text">0%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress ai"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>AWS <span class="aws-text">0%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress aws"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Personal Skills -->
+        <div class="personal-section">
+            <h3 class="skill-title">Personal Skills</h3>
+
+            <div class="circle-skill-container">
+
+                <div class="circle-wrap">
+                    <div class="circle communication">0%</div>
+                    <p>Communication</p>
+                </div>
+
+                <div class="circle-wrap">
+                    <div class="circle leadership">0%</div>
+
+                    <p>Leadership</p>
+                </div>
+                <div class="circle-wrap"><div class="circle teamwork">0%</div>
+                    <p>Teamwork</p>
+                </div>
+
+                <div class="circle-wrap">
+                    <div class="circle problem">0%</div>
+                    <p>Problem Solving</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="projects" id="projects" data-aos="zoom-in">
+    <h2>Projects</h2>
+
+    <div class="project-cards">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="images/resume-banner.jpg" alt="AI Resume Screener">
+
+            <h3>AI Resume Screener</h3>
+            <p class="project-desc">
+                AI-powered ATS system that analyzes resumes and matches them with job descriptions.
+            </p>
+
+            <div class="features">
+                <p>✔ Resume Parsing</p>
+                <p>✔ Keyword Matching</p>
+                <p>✔ ATS Score Prediction</p>
+            </div>
+
+            <div class="problem-box">
+                <strong>Problem Solved:</strong>
+                Helps recruiters shortlist resumes faster.
+            </div>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Streamlit</span>
+            </div>
+
+            <div class="project-buttons">
+                <a href="https://github.com/tharunyeddannagaru" target="_blank">GitHub</a>
+                <a href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="images/agent-banner.jpg" alt="AI Agent">
+
+            <h3>AI Agent</h3>
+            <p class="project-desc">
+                Intelligent chatbot assistant built using Python and machine learning.
+            </p>
+
+            <div class="features">
+                <p>✔ Smart Responses</p>
+                <p>✔ Context Awareness</p>
+                <p>✔ AI Interaction</p>
+            </div>
+
+            <div class="problem-box">
+                <strong>Problem Solved:</strong>
+                Provides fast intelligent assistance to users.
+            </div>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>AI</span>
+                <span>ML</span>
+            </div>
+
+            <div class="project-buttons">
+                <a href="https://github.com/tharunyeddannagaru" target="_blank">GitHub</a>
+                <a href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="images/portfolio-banner.jpg" alt="Portfolio Website">
+
+            <h3>Portfolio Website</h3>
+            <p class="project-desc">
+                Premium Jarvis-inspired portfolio with animations and futuristic UI.
+            </p>
+
+            <div class="features">
+                <p>✔ AOS Animation</p>
+                <p>✔ Responsive Design</p>
+                <p>✔ Particle Background</p>
+            </div>
+
+            <div class="problem-box">
+                <strong>Problem Solved:</strong>
+                Creates strong recruiter first impression.
+            </div>
+
+            <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+            </div>
+
+            <div class="project-buttons">
+                <a href="https://github.com/tharunyeddannagaru" target="_blank">GitHub</a>
+                <a href="#">Live Demo</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="certifications" id="certifications" data-aos="fade-left">
+    <h2>Certifications & Achievements</h2>
+
+    <p class="section-subtitle">
+        Certifications proving my AI, Cloud and Professional skills
+    </p>
+
+    <!-- Timeline -->
+    <div class="timeline">
+
+        <div class="timeline-container left">
+            <div class="content" onclick="openCertificate('images/skill.jpg')">
+                <h3>🏆 Academic First Rank</h3>
+                <p>Secured First Rank in academics with excellent performance.</p>
+            </div>
+        </div>
+
+        <div class="timeline-container right">
+            <div class="content" onclick="openCertificate('images/nptel-1.jpg')">
+                <h3>📜 NPTEL Certification</h3>
+                <p>Completed technical certification successfully.</p>
+            </div>
+        </div>
+
+        <div class="timeline-container left">
+            <div class="content" onclick="openCertificate('images/skill.jpg')">
+                <h3>☁ AWS Certification</h3>
+                <p>Learned cloud fundamentals and AWS services.</p>
+            </div>
+        </div>
+
+        <div class="timeline-container right">
+            <div class="content" onclick="openCertificate('images/Wadhwani.jpg')">
+                <h3>🚀 Wadhwani Ignite</h3>
+                <p>Innovation and entrepreneurship program.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Certificate Gallery -->
+    <div class="certificate-gallery">
+
+        <div class="certificate-card">
+            <img src="images/NISM.jpg" alt="NISM" onclick="openCertificate(this.src)">
+            <h3>NISM Certificate</h3>
+        </div>
+
+        <div class="certificate-card">
+            <img src="images/nptel-1.jpg" alt="NPTEL 1" onclick="openCertificate(this.src)">
+            <h3>NPTEL Certificate 1</h3>
+        </div>
+
+        <div class="certificate-card">
+            <img src="images/nptel-2.jpg" alt="NPTEL 2" onclick="openCertificate(this.src)">
+            <h3>NPTEL Certificate 2</h3>
+        </div>
+
+        <div class="certificate-card">
+            <img src="images/Wadhwani.jpg" alt="Wadhwani 1" onclick="openCertificate(this.src)">
+            <h3>Wadhwani Participation</h3>
+        </div>
+
+        <div class="certificate-card">
+            <img src="images/Wadhwani1.jpg" alt="Wadhwani 2" onclick="openCertificate(this.src)">
+            <h3>Wadhwani Completion</h3>
+        </div>
+
+        <div class="certificate-card">
+            <img src="images/skill.jpg" alt="Skill" onclick="openCertificate(this.src)">
+            <h3>Skill Development</h3>
+        </div>
+
+    </div>
+</section>
+<section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+
+    <div class="contact-container">
+
+        <!-- Left Side -->
+        <div class="contact-info">
+            <p>📧 Email: tharunyeddannagaru@gmail.com</p>
+            <p>📞 Phone: +91 7569329359</p>
+            <p>📍 Location: Madanapalli, AP, India</p>
+            <p>🎓 B.Tech CSE-AI</p>
+
+            <div class="social-icons">
+                <a href="https://wa.me/917569329359" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://instagram.com/tharun._.yaddannagaru" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://t.me/tharun" target="_blank" class="telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/tharun-yeddannagaru-5bb3a7298" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/tharunyeddannagaru" target="_blank" class="github">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side Form -->
+        <form class="contact-form" action="https://formspree.io/f/xrewkoev" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit" onclick="alert('clicked')">Send Message</button>
+
+        </form>
+
+    </div>
+</section>
+<footer>
+    <p>© 2026 Tharun Portfolio | Built with HTML, CSS & JavaScript</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<div id="certificateModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="popupImage">
+</div>
+div id="chat-label">Chat with me!</div>
+<div id="chatbot">🤖</div>
+
+<div id="chat-box">
+    <h3>🤖 Tharun AI</h3>
+    <p id="chat-response">Hi! Ask about me 👋</p>
+
+    <div class="chat-buttons">
+        <button onclick="chatReply('about')">👤 About</button>
+        <button onclick="chatReply('skills')">💻 Skills</button>
+        <button onclick="chatReply('projects')">🚀 Projects</button>
+        <button onclick="chatReply('contact')">📞 Contact</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
