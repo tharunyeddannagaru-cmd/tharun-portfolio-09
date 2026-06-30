@@ -313,13 +313,25 @@ button:hover{
 }
 
 .progress{
-    height:100%;
-    border-radius:20px;
-    box-shadow:0 0 20px cyan;
-    background:linear-gradient(90deg,#00ffff,#0077ff);
-    animation:fillBar 2s ease;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0077ff);
+    border-radius: 20px;
+    box-shadow: 0 0 20px cyan;
+    position: relative;
+    overflow: hidden;
 }
 
+.progress::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+    width:20px;
+    height:100%;
+    background:rgba(255,255,255,0.7);
+    filter:blur(8px);
+}
 .python,
 .java,
 .ai,
@@ -1110,13 +1122,184 @@ body.light-mode .contact-form textarea{
 }
 #chat-label{
     position: fixed;
-    bottom: 145px;
+    bottom: 105px;
     right: 25px;
-    background: rgba(20,20,40,0.95);
+    background: rgba(15,23,42,0.95);
     color: white;
-    padding: 12px 18px;
+    padding: 10px 16px;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 14px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
     z-index: 99999;
-    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+#chatbot:hover ~ #chat-label{
+    opacity: 1;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    #typing {
+        font-size: 22px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .profile-pic {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .hero-social {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* About */
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    /* Skills */
+    .skills-main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .technical-section,
+    .personal-section {
+        width: 100%;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+    }
+.circle{
+    transition: all 0.5s ease;
+}
+
+.circle:hover{
+    transform: scale(1.08);
+}
+    /* Projects */
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 95%;
+    }
+
+    /* Timeline */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-container {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+
+    .timeline-container::after {
+        left: 10px !important;
+    }
+
+    /* Certificates */
+    .certificate-card {
+        width: 95%;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px;
+        padding: 18px;
+    }
+
+    /* Chatbot */
+    #chatbot {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    #chat-box {
+        width: 240px;
+        right: 15px;
+        bottom: 80px;
+    }
+}
+.contact-info a{
+    color: cyan;
+    text-decoration: none;
+}
+
+.contact-info a:hover{
+    text-shadow: 0 0 10px cyan;
 }

@@ -83,15 +83,27 @@ function animateBar(barClass, textClass, target) {
             clearInterval(interval);
         } else {
             current++;
-            if (bar) bar.style.width = current + "%";
+            if (bar) {
+                bar.style.width = current + "%";
+                bar.style.boxShadow = `0 0 ${current / 3}px cyan`;
+            }
             if (text) text.innerText = current + "%";
         }
-    }, 20);
+    }, 15);
 }
 
 function animateCircle(circleClass, target) {
     const circle = document.querySelector(circleClass);
     if (!circle) return;
+
+    circle.style.transform = "rotate(-180deg) scale(0.5)";
+    circle.style.opacity = "0";
+
+    setTimeout(() => {
+        circle.style.transition = "all 0.8s ease";
+        circle.style.transform = "rotate(0deg) scale(1)";
+        circle.style.opacity = "1";
+    }, 200);
 
     let current = 0;
 
@@ -104,8 +116,10 @@ function animateCircle(circleClass, target) {
             circle.style.background =
                 `radial-gradient(circle, #02111d 55%, transparent 56%),
                  conic-gradient(cyan ${current}%, rgba(255,255,255,0.1) 0)`;
+
+            circle.style.boxShadow = `0 0 ${current / 3}px cyan`;
         }
-    }, 20);
+    }, 15);
 }
 
 function animateSkills() {
@@ -158,7 +172,7 @@ window.addEventListener("DOMContentLoaded", function () {
         };
     }
 
-    // Chatbot
+    // Chatbot toggle
     const bot = document.getElementById("chatbot");
     const box = document.getElementById("chat-box");
 
@@ -192,14 +206,25 @@ window.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     }
 
-    // Skills button click
-    const skillsBtn = document.querySelector('a[href="#skills"]');
-    if (skillsBtn) {
-        skillsBtn.addEventListener("click", function () {
-            setTimeout(animateSkills, 500);
+    // Skills Scroll Animation
+    const skillsSection = document.getElementById("skills");
+
+    if (skillsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkills();
+                    observer.unobserve(skillsSection);
+                }
+            });
+        }, {
+            threshold: 0.35
         });
+
+        observer.observe(skillsSection);
     }
 });
+
 /* =========================
    CHATBOT REPLIES
 ========================= */
